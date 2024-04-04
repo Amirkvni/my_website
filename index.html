@@ -28,6 +28,7 @@
             },
             backgroundImage: {
               bluebg: "url('img/bg.jpg')",
+              bg_2: "url('img/bg-2.jpg')",
             },
           },
         },
@@ -44,9 +45,9 @@
   <body class="bg-bluebg bg-no-repeat bg-cover">
     <section class="mt-16">
       <div class="container bg-orange-700">
-        <div class="row flex w-full bg-red-200">
+        <div class="row flex w-full bg-red-200 gap-x-5">
           <div
-            class="col w-1/5 flex flex-col items-center justify-center bg-black rounded-xl"
+            class="col w-1/5 flex-col items-center justify-center bg-black rounded-xl hidden md:flex"
           >
             <div class="rounded-xl border-2 overflow-hidden">
               <img src="img/young-icon.svg" class="w-40 h-40" />
@@ -102,7 +103,38 @@
               </span>
             </div>
           </div>
-          <div class="col w-4/5">1</div>
+          <div class="col w-4/5 flex flex-col">
+            <div class="flex bg-black rounded-md p-2.5 w-full justify-between">
+              <div class="flex items-center justify-between w-80">
+                <h1 class="text-2xl">امیرحسین کیوانی</h1>
+                <span class="rounded-md bg-yellow-500">برنامه نویس وب</span>
+              </div>
+              <div class="flex w-28 flex items-center justify-between">
+                <i class="fa-brands fa-instagram text-white bg-red-700"></i>
+                <i class="fa-brands fa-telegram text-white bg-blue-600"></i>
+                <i class="fa-brands fa-github text-white bg-sky-400"></i>
+                <i class="fa-regular fa-envelope text-white bg-rose-800"></i>
+              </div>
+              <a href="#" class="rounded-md bg-yellow-300">دانلود رزومه</a>
+            </div>
+            <div class="w-full flex bg-bg_2 mt-12">
+              <div class="py-24 px-16">
+                <h2 class="text-yellow-400">بیوگرافی</h2>
+                <p class="text-yellow-400">
+                  مسلط به چندین زبان برنامه نویسی، کلیه امور گرافیکی و طراحی
+                  سایت با چندین سال تجربه مفید.
+                </p>
+                <a
+                  href="#"
+                  class="bg-yellow-700 rounded-lg px-2.5 py-1 mt-1 inline-block"
+                  >تماس با من</a
+                >
+              </div>
+              <div class="">
+                <img src="img/programmer.png" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
