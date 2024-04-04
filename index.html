@@ -1,13 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css "
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          container: {
+            center: true,
+            padding: {
+              DEFAULT: "1rem",
+              sm: "2rem",
+              lg: "4rem",
+              xl: "5rem",
+              "2xl": "6rem",
+            },
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            backgroundImage: {
+              bluebg: "url('img/bg.jpg')",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
   </head>
-  <body>
-    <h1>amirhosein keivani</h1>
-    <p>salam</p>
+  <body class="bg-bluebg bg-no-repeat bg-cover">
+    <section class="mt-16">
+      <div class="container bg-orange-700">
+        <div class="row flex w-full bg-red-200">
+          <div
+            class="col w-1/5 flex flex-col items-center justify-center bg-black rounded-xl"
+          >
+            <div class="rounded-xl border-2 overflow-hidden">
+              <img src="img/young-icon.svg" class="w-40 h-40" />
+            </div>
+            <div class="mt-8 w-32 flex flex-col gap-y-4 divide-y rounded-xl">
+              <span class="px-2 py-2 bg-white rounded-sm">
+                <a href="#" class="flex items-center gap-x-2 text-black"
+                  ><i
+                    class="fa-solid fa-user bg-yellow-600 rounded-sm w-7 h-7 flex justify-center items-center"
+                  ></i
+                  >درباره من</a
+                >
+              </span>
+              <span class="px-2 py-2 rounded-sm">
+                <a href="#" class="flex items-center gap-x-2 text-white"
+                  ><i
+                    class="fa-solid fa-file bg-yellow-600 rounded-sm w-7 h-7 flex justify-center items-center"
+                  ></i
+                  >رزومه من</a
+                >
+              </span>
+              <span class="px-2 py-2 rounded-sm">
+                <a href="#" class="flex items-center gap-x-2 text-white"
+                  ><i
+                    class="fa-solid fa-briefcase bg-yellow-600 rounded-sm w-7 h-7 flex justify-center items-center"
+                  ></i
+                  >خدمات</a
+                >
+              </span>
+              <span class="px-2 py-2 rounded-sm">
+                <a href="#" class="flex items-center gap-x-2 text-white"
+                  ><i
+                    class="fa-solid fa-bars-progress bg-yellow-600 rounded-sm w-7 h-7 flex justify-center items-center"
+                  ></i
+                  >نمونه کارها</a
+                >
+              </span>
+              <span class="px-2 py-2 rounded-sm">
+                <a href="#" class="flex items-center gap-x-2 text-white"
+                  ><i
+                    class="fa-solid fa-globe bg-yellow-600 rounded-sm flex w-7 h-7 justify-center items-center"
+                  ></i
+                  >وبلاگ</a
+                >
+              </span>
+              <span class="px-2 py-2 rounded-sm">
+                <a href="#" class="flex items-center gap-x-2 text-white"
+                  ><i
+                    class="fa-solid fa-phone-volume bg-yellow-600 rounded-sm w-7 h-7 flex justify-center items-center"
+                  ></i
+                  >تماس با من</a
+                >
+              </span>
+            </div>
+          </div>
+          <div class="col w-4/5">1</div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
