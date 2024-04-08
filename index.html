@@ -17,6 +17,19 @@
       tailwind.config = {
         theme: {
           extend: {
+            animation: {
+              bganimation: "bganimation 2s infinite",
+            },
+            keyframes: {
+              bganimation: {
+                "0%": { "border-color": "#78716c" },
+                "20%": { "border-color": "#57534e" },
+                "40%": { "border-color": "#44403c" },
+                "60%": { "border-color": "#292524" },
+                "80%": { "border-color": "#1c1917" },
+                "100%": { "border-color": "#0c0a09" },
+              },
+            },
             container: {
               padding: {
                 DEFAULT: "1rem",
@@ -294,7 +307,7 @@
             class="text-white max-w-[1320px] flex flex-col justify-center items-center py-36 gap-y-6"
           >
             <div
-              class="min-w-[250px] min-h-[250px] sm:min-w-[340px] sm:min-h-[340px] flex items-center justify-center border-solid border-8 border-white rounded-[50%]"
+              class="min-w-[250px] min-h-[250px] sm:min-w-[340px] sm:min-h-[340px] flex items-center justify-center border-solid border-8 animate-bganimation rounded-[50%]"
             >
               <img
                 src="images/banner.png "
@@ -384,8 +397,8 @@
                       <img src="images/my-work-2.jpg" class="w-full" />
                     </div>
                     <div class="flex w-full justify-around">
-                      <div>اپلیکیشن</div>
-                      <div>
+                      <div class="text-primary-color">اپلیکیشن</div>
+                      <div class="text-white cursor-pointer">
                         <i class="fa-regular fa-heart"></i>
                         <span>122</span>
                       </div>
@@ -401,8 +414,8 @@
                       <img src="images/my-work-1.jpg" class="w-full" />
                     </div>
                     <div class="flex w-full justify-around">
-                      <div>اپلیکیشن</div>
-                      <div>
+                      <div class="text-primary-color">اپلیکیشن</div>
+                      <div class="text-white cursor-pointer">
                         <i class="fa-regular fa-heart"></i>
                         <span>122</span>
                       </div>
@@ -418,8 +431,8 @@
                       <img src="images/my-work-2.jpg" class="w-full" />
                     </div>
                     <div class="flex w-full justify-around">
-                      <div>اپلیکیشن</div>
-                      <div>
+                      <div class="text-primary-color">اپلیکیشن</div>
+                      <div class="text-white cursor-pointer">
                         <i class="fa-regular fa-heart"></i>
                         <span>122</span>
                       </div>
@@ -435,8 +448,8 @@
                       <img src="images/my-work-1.jpg" class="w-full" />
                     </div>
                     <div class="flex w-full justify-around">
-                      <div>اپلیکیشن</div>
-                      <div>
+                      <div class="text-primary-color">اپلیکیشن</div>
+                      <div class="text-white cursor-pointer">
                         <i class="fa-regular fa-heart"></i>
                         <span>122</span>
                       </div>
@@ -452,8 +465,8 @@
                       <img src="images/my-work-2.jpg" class="w-full" />
                     </div>
                     <div class="flex w-full justify-around">
-                      <div>اپلیکیشن</div>
-                      <div>
+                      <div class="text-primary-color">اپلیکیشن</div>
+                      <div class="text-white cursor-pointer">
                         <i class="fa-regular fa-heart"></i>
                         <span>122</span>
                       </div>
@@ -469,10 +482,10 @@
                       <img src="images/my-work-1.jpg" class="w-full" />
                     </div>
                     <div class="flex w-full justify-around">
-                      <div>اپلیکیشن</div>
-                      <div>
+                      <div class="text-primary-color">اپلیکیشن</div>
+                      <div class="text-white cursor-pointer">
                         <i class="fa-regular fa-heart"></i>
-                        <span>122</span>
+                        <span>110</span>
                       </div>
                     </div>
                     <span class="text-[23px] text-second-color"
@@ -484,11 +497,12 @@
                 <div class="swiper-pagination"></div>
 
                 <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
+                <div
+                  class="swiper-button-prev text-primary-color after:text-2xl"
+                ></div>
+                <div
+                  class="swiper-button-next text-primary-color after:text-2xl"
+                ></div>
               </div>
             </div>
           </div>
@@ -538,7 +552,7 @@
                 <div class="flex justify-between items-center px-6 py-10">
                   <div>
                     <h5>لورم ایپسوم متن ساختگی</h5>
-                    <span>دانشگاه اصفهان</span>
+                    <span>لورم ایپسوم</span>
                   </div>
                   <div>
                     <span
@@ -560,7 +574,7 @@
                 <div class="flex justify-between items-center px-6 py-10">
                   <div>
                     <h5>لورم ایپسوم متن ساختگی</h5>
-                    <span>دانشگاه اصفهان</span>
+                    <span>لورم ایپسوم</span>
                   </div>
                   <div>
                     <span
@@ -582,7 +596,7 @@
                 <div class="flex justify-between items-center px-6 py-10">
                   <div>
                     <h5>لورم ایپسوم متن ساختگی</h5>
-                    <span>دانشگاه اصفهان</span>
+                    <span>لورم ایپسوم</span>
                   </div>
                   <div>
                     <span
@@ -604,7 +618,7 @@
                 <div class="flex justify-between items-center px-6 py-10">
                   <div>
                     <h5>لورم ایپسوم متن ساختگی</h5>
-                    <span>دانشگاه اصفهان</span>
+                    <span>لورم ایپسوم</span>
                   </div>
                   <div>
                     <span
@@ -742,7 +756,7 @@
                 <div class="flex justify-between items-center px-6 py-10">
                   <div>
                     <h5>لورم ایپسوم متن ساختگی</h5>
-                    <span>دانشگاه اصفهان</span>
+                    <span>لورم ایپسوم</span>
                   </div>
                   <div>
                     <span
@@ -764,7 +778,7 @@
                 <div class="flex justify-between items-center px-6 py-10">
                   <div>
                     <h5>لورم ایپسوم متن ساختگی</h5>
-                    <span>دانشگاه اصفهان</span>
+                    <span>لورم ایپسوم</span>
                   </div>
                   <div>
                     <span
@@ -786,7 +800,7 @@
                 <div class="flex justify-between items-center px-6 py-10">
                   <div>
                     <h5>لورم ایپسوم متن ساختگی</h5>
-                    <span>دانشگاه اصفهان</span>
+                    <span>لورم ایپسوم</span>
                   </div>
                   <div>
                     <span
@@ -808,7 +822,7 @@
                 <div class="flex justify-between items-center px-6 py-10">
                   <div>
                     <h5>لورم ایپسوم متن ساختگی</h5>
-                    <span>دانشگاه اصفهان</span>
+                    <span>لورم ایپسوم</span>
                   </div>
                   <div>
                     <span
@@ -835,7 +849,7 @@
                 <div class="flex justify-between items-center px-6 py-10">
                   <div>
                     <h5>لورم ایپسوم متن ساختگی</h5>
-                    <span>دانشگاه اصفهان</span>
+                    <span>لورم ایپسوم</span>
                   </div>
                   <div>
                     <span
@@ -857,7 +871,7 @@
                 <div class="flex justify-between items-center px-6 py-10">
                   <div>
                     <h5>لورم ایپسوم متن ساختگی</h5>
-                    <span>دانشگاه اصفهان</span>
+                    <span>لورم ایپسوم</span>
                   </div>
                   <div>
                     <span
@@ -877,31 +891,31 @@
           </div>
           <hr class="border-solid border border-[#121415]" />
           <div class="py-20">
-            <span class="text-primary-color">مشتریان محبوب</span>
-            <h2 class="text-6xl text-second-color py-8">مشتریان</h2>
+            <span class="text-primary-color">مینی پروژه ها</span>
+            <h2 class="text-6xl text-second-color py-8">زبان ها</h2>
             <div class="flex gap-x-12 flex-col md:flex-row py-5">
               <div class="md:h-screen md:w-1/3 w-full">
                 <div class="md:sticky md:top-[160px]">
                   <ul class="flex flex-col gap-y-10">
                     <li
-                      class="text-center p-5 rounded-xl customShadow3 hover:text-primary-color cursor-pointer"
+                      class="text-center p-5 rounded-xl customShadow3 text-primary-color cursor-pointer"
                     >
-                      جاوااسکریپت
+                      html,css
                     </li>
                     <li
                       class="text-center p-5 rounded-xl customShadow3 hover:text-primary-color cursor-pointer"
                     >
-                      جاوااسکریپت
+                      tailwind
                     </li>
                     <li
                       class="text-center p-5 rounded-xl customShadow3 hover:text-primary-color cursor-pointer"
                     >
-                      جاوااسکریپت
+                      javascript
                     </li>
                     <li
                       class="text-center p-5 rounded-xl customShadow3 hover:text-primary-color cursor-pointer"
                     >
-                      جاوااسکریپت
+                      react
                     </li>
                   </ul>
                 </div>
@@ -909,110 +923,294 @@
               <div
                 class="md:w-2/3 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 py-[65px]"
               >
-                <div
-                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
-                >
-                  <div class="px-5 py-12">
-                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-12 h-[150px]">
+                      <img
+                        src="images/tooltip.JPG"
+                        class="w-full rounded-3xl"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
                   </div>
-                  <div class="text-center text-white">tooltip</div>
-                </div>
-                <div
-                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
-                >
-                  <div class="px-5 py-12">
-                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/glass-login-form.JPG"
+                        class="w-full rounded-3xl"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
                   </div>
-                  <div class="text-center text-white">tooltip</div>
-                </div>
-                <div
-                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
-                >
-                  <div class="px-5 py-12">
-                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/camp-website.JPG"
+                        class="w-full rounded-3xl"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
                   </div>
-                  <div class="text-center text-white">tooltip</div>
-                </div>
-                <div
-                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
-                >
-                  <div class="px-5 py-12">
-                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/ecommerce website.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
                   </div>
-                  <div class="text-center text-white">tooltip</div>
-                </div>
-                <div
-                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
-                >
-                  <div class="px-5 py-12">
-                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/fastfood-website.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
                   </div>
-                  <div class="text-center text-white">tooltip</div>
-                </div>
-                <div
-                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
-                >
-                  <div class="px-5 py-12">
-                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/education website.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
                   </div>
-                  <div class="text-center text-white">tooltip</div>
-                </div>
-                <div
-                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
-                >
-                  <div class="px-5 py-12">
-                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/food-ordering-webite.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
                   </div>
-                  <div class="text-center text-white">tooltip</div>
-                </div>
-                <div
-                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
-                >
-                  <div class="px-5 py-12">
-                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/glass-slide-bar.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
                   </div>
-                  <div class="text-center text-white">tooltip</div>
-                </div>
-                <div
-                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
-                >
-                  <div class="px-5 py-12">
-                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/loading-animation.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
                   </div>
-                  <div class="text-center text-white">tooltip</div>
-                </div>
-                <div
-                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
-                >
-                  <div class="px-5 py-12">
-                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/mega-menu.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
                   </div>
-                  <div class="text-center text-white">tooltip</div>
-                </div>
-                <div
-                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
-                >
-                  <div class="px-5 py-12">
-                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div
+                      class="px-5 py-5 h-[150px] flex items-center justify-center"
+                    >
+                      <img
+                        src="images/nav menu.JPG"
+                        class="w-full rounded-3xl"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
                   </div>
-                  <div class="text-center text-white">tooltip</div>
-                </div>
-                <div
-                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
-                >
-                  <div class="px-5 py-12">
-                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/neomorphism-login-page.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
                   </div>
-                  <div class="text-center text-white">tooltip</div>
-                </div>
-                <div
-                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
-                >
-                  <div class="px-5 py-12">
-                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/neomorphism keyboard.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
                   </div>
-                  <div class="text-center text-white">tooltip</div>
-                </div>
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/pars-pack.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/personal-website.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/personal-website2.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/products.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/responsive-website.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/skill-bar.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/slide-navigation-tab.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/travel-website.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div
+                    class="w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                  >
+                    <div class="px-5 py-5 h-[150px]">
+                      <img
+                        src="images/uploader.JPG"
+                        class="w-full rounded-3xl h-full"
+                      />
+                    </div>
+                    <div class="text-center text-white">tooltip</div>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -1149,10 +1347,6 @@
         direction: "horizontal",
         loop: true,
 
-        // If we need pagination
-        pagination: {
-          el: ".swiper-pagination",
-        },
         spaceBetween: 30,
         breakpoints: {
           768: {
