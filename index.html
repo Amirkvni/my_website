@@ -3,33 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>amirhosein keivani</title>
-    <link rel="icon" type="image/png" href="img/developer.png" />
+    <title>وبسایت امیرحسین کیوانی</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css "
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
-          container: {
-            center: true,
-            padding: {
-              DEFAULT: "1rem",
-              sm: "2rem",
-              lg: "4rem",
-              xl: "5rem",
-              "2xl": "6rem",
-            },
-          },
           extend: {
-            colors: {
-              clifford: "#da373d",
+            container: {
+              padding: {
+                DEFAULT: "1rem",
+                sm: "2rem",
+                lg: "4rem",
+                xl: "5rem",
+                "2xl": "6rem",
+              },
             },
-            backgroundImage: {
-              bluebg: "url('img/bg.jpg')",
-              bg_2: "url('img/bg-2.jpg')",
+            colors: {
+              "primary-color": "#ff014f",
+              "second-color": "#cacfde",
+              main: "#212428",
+            },
+            fontFamily: {
+              iranSans: "iranSans",
+            },
+            boxShadow: {
+              custom: " rgb(38, 57, 77) 0px 20px 30px -10px",
+              custom_2:
+                "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px",
             },
           },
         },
@@ -40,207 +48,1131 @@
         .content-auto {
           content-visibility: auto;
         }
+        .x {
+          background: linear-gradient(to right bottom, #212428, #16181c);
+        }
+        .customShadow {
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .customShadow2 {
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        .customShadow3 {
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+            rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+
+        .resume-content {
+          height: 0;
+          overflow: hidden;
+          opacity: 0;
+          padding: 0;
+        }
+        .resume-content__show {
+          height: auto;
+          overflow: visible;
+          opacity: 1;
+          padding: 80px 0;
+        }
+        .resume_item--active {
+          color: #ff014f;
+          font-size: 18px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+            rgba(0, 0, 0, 0.22) 0px 15px 12px;
+          background-color: #878e99;
+        }
+      }
+      @layer base {
+        @font-face {
+          font-family: "iranSans";
+          font-style: normal;
+
+          src: url(fonts/Iranian\ Sans.ttf) format("TrueTypefonts");
+        }
       }
     </style>
+    <link rel="stylesheet" href="skillbar.css" />
   </head>
-  <body class="bg-bluebg bg-no-repeat bg-cover">
-    <section class="mt-16">
-      <div class="container">
+  <body class="bg-main font-iranSans">
+    <div class="flex">
+      <div class="lg:h-screen lg:w-[290px]">
         <div
-          class="row md:flex md:flex-row w-full gap-x-5 flex-col flex items-center"
+          class="hidden lg:flex flex-col fixed right-0 w-[290px] text-second-color py-[50px] px-[50px] bg-transparent border-l-[3px] border-l-solid border-l-black justify-between min-h-screen"
         >
-          <div
-            class="col w-1/5 flex-col items-center justify-center bg-black rounded-xl hidden md:flex py-3"
-          >
-            <div class="rounded-xl border-2 overflow-hidden">
-              <img src="img/programmer.png" class="w-40 h-40" />
+          <div>
+            <img
+              src="images/logo.png
+        "
+              class="rounded-[50%] border-[5px] border-solid border-[#32363b]"
+            />
+          </div>
+          <div class="flex flex-col gap-y-5 px-3">
+            <div
+              class="flex items-center gap-x-3 text-primary-color cursor-pointer"
+            >
+              <i class="fa-solid fa-house"></i><span>صفحه اصلی</span>
             </div>
-            <div class="mt-8 w-32 flex flex-col gap-y-4 divide-y rounded-xl">
-              <span class="px-2 py-2 bg-white rounded-sm">
-                <a href="#" class="flex items-center gap-x-2 text-black"
-                  ><i
-                    class="fa-solid fa-user bg-yellow-600 rounded-sm w-7 h-7 flex justify-center items-center"
-                  ></i
-                  >درباره من</a
-                >
-              </span>
-              <span class="px-2 py-2 rounded-sm">
-                <a href="#" class="flex items-center gap-x-2 text-white"
-                  ><i
-                    class="fa-solid fa-file bg-yellow-600 rounded-sm w-7 h-7 flex justify-center items-center"
-                  ></i
-                  >رزومه من</a
-                >
-              </span>
-              <span class="px-2 py-2 rounded-sm">
-                <a href="#" class="flex items-center gap-x-2 text-white"
-                  ><i
-                    class="fa-solid fa-briefcase bg-yellow-600 rounded-sm w-7 h-7 flex justify-center items-center"
-                  ></i
-                  >خدمات</a
-                >
-              </span>
-              <span class="px-2 py-2 rounded-sm">
-                <a href="#" class="flex items-center gap-x-2 text-white"
-                  ><i
-                    class="fa-solid fa-bars-progress bg-yellow-600 rounded-sm w-7 h-7 flex justify-center items-center"
-                  ></i
-                  >نمونه کارها</a
-                >
-              </span>
-              <span class="px-2 py-2 rounded-sm">
-                <a href="#" class="flex items-center gap-x-2 text-white"
-                  ><i
-                    class="fa-solid fa-globe bg-yellow-600 rounded-sm flex w-7 h-7 justify-center items-center"
-                  ></i
-                  >وبلاگ</a
-                >
-              </span>
-              <span class="px-2 py-2 rounded-sm">
-                <a href="#" class="flex items-center gap-x-2 text-white"
-                  ><i
-                    class="fa-solid fa-phone-volume bg-yellow-600 rounded-sm w-7 h-7 flex justify-center items-center"
-                  ></i
-                  >تماس با من</a
-                >
-              </span>
+            <div
+              class="flex items-center gap-x-3 hover:text-primary-color cursor-pointer"
+            >
+              <i class="fa-solid fa-bolt"></i><span>مهارت ها</span>
+            </div>
+            <div
+              class="flex items-center gap-x-3 hover:text-primary-color cursor-pointer"
+            >
+              <i class="fa-regular fa-rectangle-list"></i
+              ><span>نمونه کارها</span>
+            </div>
+            <div
+              class="flex items-center gap-x-3 hover:text-primary-color cursor-pointer"
+            >
+              <i class="fa-solid fa-file"></i><span>رزومه</span>
+            </div>
+            <div
+              class="flex items-center gap-x-3 hover:text-primary-color cursor-pointer"
+            >
+              <i class="fa-solid fa-user-group"></i><span>مشتریان</span>
+            </div>
+            <div
+              class="flex items-center gap-x-3 hover:text-primary-color cursor-pointer"
+            >
+              <i class="fa-solid fa-cart-shopping"></i><span>تعرفه ها</span>
+            </div>
+            <div
+              class="flex items-center gap-x-3 hover:text-primary-color cursor-pointer"
+            >
+              <i class="fa-solid fa-book-open"></i><span>وبلاگ</span>
+            </div>
+            <div
+              class="flex items-center gap-x-3 hover:text-primary-color cursor-pointer"
+            >
+              <i class="fa-solid fa-address-book"></i><span>ارتباط با من</span>
             </div>
           </div>
-          <div class="col w-full md:w-4/5 flex flex-col">
-            <div
-              class="flex bg-black rounded-md p-2.5 w-full justify-between flex-wrap items-center h-24 md:h-auto border-t-2 border-t-yellow-400"
-            >
-              <div class="flex items-center justify-between w-full md:w-80">
-                <h1 class="text-5 md:text-2xl text-white">امیرحسین کیوانی</h1>
-                <span class="rounded-md bg-yellow-500">برنامه نویس وب</span>
-              </div>
-              <div class="flex w-28 flex items-center justify-between gap-x-2">
-                <i
-                  class="fa-brands fa-instagram text-white bg-red-700 w-10 h-8 flex items-center justify-center rounded-md"
-                ></i>
-                <i
-                  class="fa-brands fa-telegram text-white bg-blue-600 w-10 h-8 flex items-center justify-center rounded-md"
-                ></i>
-                <i
-                  class="fa-brands fa-github text-white bg-sky-400 w-10 h-8 flex items-center justify-center rounded-md"
-                ></i>
-                <i
-                  class="fa-regular fa-envelope text-white bg-rose-800 w-10 h-8 flex items-center justify-center rounded-md"
-                ></i>
-              </div>
-              <a href="#" class="rounded-md bg-yellow-300 py-2 px-3"
-                >دانلود رزومه</a
-              >
-            </div>
-            <div class="mt-8 bg-black py-4 px-3 rounded-xl">
+          <div class="border-solid border-t border-t-white">
+            <span class="pt-3 inline-block">شبکه های اجتماعی</span>
+            <div class="flex flex-wrap items-center gap-px pt-3">
               <div
-                class="w-full flex flex-col-reverse md:flex-row bg-bg_2 rounded-3xl"
+                class="h-[53px] w-[53px] shadow-custom flex items-center justify-center bg-transparent rounded-xl hover:scale-125 hover:text-red-800 cursor-pointer"
               >
-                <div class="py-10 px-12 md:py-24 px-16">
-                  <h2 class="text-yellow-400 text-2xl pb-5">بیوگرافی</h2>
-                  <p class="text-yellow-400 py-4">
-                    مسلط به چندین زبان برنامه نویسی، کلیه امور گرافیکی و طراحی
-                    سایت با چندین سال تجربه مفید.
-                  </p>
-                  <a
-                    href="#"
-                    class="bg-yellow-700 rounded-lg px-2.5 py-1 mt-1 inline-block"
-                    >تماس با من</a
-                  >
-                </div>
-                <div class="">
-                  <img src="img/programmer.png" />
-                </div>
+                <i class="fa-brands fa-facebook"></i>
               </div>
-              <div class="mt-12">
-                <h3 class="text-yellow-400 text-xl">درباره من</h3>
-                <p class="text-yellow-500">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                  استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و
-                  مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
-                  تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای
-                  کاربردی می باشد.
-                </p>
+              <div
+                class="h-[53px] w-[53px] shadow-custom flex items-center justify-center bg-transparent rounded-xl hover:scale-125 hover:text-red-800 cursor-pointer"
+              >
+                <i class="fa-brands fa-twitter"></i>
               </div>
-              <div class="mt-12 text-white">
-                <h4 class="text-yellow-400">اطلاعات پایه</h4>
-                <div class="flex flex-col md:flex-row">
-                  <div class="w-3/6">
-                    <ul class="[&>li]:pt-4">
-                      <li class="text-yellow-400">
-                        تاریخ تولد:<a href="#">1382/1/15</a>
-                      </li>
-                      <li class="text-yellow-400">
-                        شماره تماس:<a href="#">09162035987</a>
-                      </li>
-                      <li class="text-yellow-400">
-                        محل سکونت:<a href="#">اصفهان</a>
-                      </li>
-                      <li class="text-yellow-400">
-                        ایمیل:<a href="#">amirhosein8292@gmail.com</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="w-3/6">
-                    <ul class="[&>li]:pt-4">
-                      <li class="text-yellow-400">
-                        مدرک تحصیلی:<a href="#">کارشناسی کامپیوتر</a>
-                      </li>
-                      <li class="text-yellow-400">
-                        وضعیت تاهل:<a href="#">محرد</a>
-                      </li>
-                      <li class="text-yellow-400">
-                        سابقه:<a href="#">۲سال</a>
-                      </li>
-                      <li class="text-yellow-400">
-                        وضعیت:<a href="#">آماده</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+              <div
+                class="h-[53px] w-[53px] shadow-custom flex items-center justify-center bg-transparent rounded-xl hover:scale-125 hover:text-red-800 cursor-pointer"
+              >
+                <i class="fa-brands fa-github"></i>
               </div>
-              <div class="flex mt-12 flex-col md:flex-row">
-                <div class="md:w-1/4 w-full mt-4 md:mt-0">
-                  <div class="flex items-center">
-                    <i
-                      class="fa-solid fa-list w-[49px] h-[63px] bg-yellow-300 flex items-center justify-center rounded-xl"
-                    ></i>
-                    <span class="text-2xl text-white pr-3">۱۵۸</span>
-                  </div>
-                  <p class="pt-3 text-white">پروژه های انجام شده</p>
-                </div>
-                <div class="md:w-1/4 w-full mt-4 md:mt-0">
-                  <div class="flex items-center">
-                    <i
-                      class="fa-solid fa-users w-[49px] h-[63px] bg-yellow-300 flex items-center justify-center rounded-xl"
-                    ></i>
-                    <span class="text-2xl text-white pr-3">2</span>
-                  </div>
-                  <p class="pt-3 text-white">مشتریان راضی</p>
-                </div>
-                <div class="md:w-1/4 w-full mt-4 md:mt-0">
-                  <div class="flex items-center">
-                    <i
-                      class="fa-solid fa-gift w-[49px] h-[63px] bg-yellow-300 flex items-center justify-center rounded-xl"
-                    ></i>
-                    <span class="text-2xl text-white pr-3">4</span>
-                  </div>
-                  <p class="pt-3 text-white">جوایز دریافت شده</p>
-                </div>
-                <div class="md:w-1/4 w-full mt-4 md:mt-0">
-                  <div class="flex items-center">
-                    <i
-                      class="fa-solid fa-code-fork w-[49px] h-[63px] bg-yellow-300 flex items-center justify-center rounded-xl"
-                    ></i>
-                    <span class="text-2xl text-white pr-3">۱</span>
-                  </div>
-                  <p class="pt-3 text-white">دامنه های به نام</p>
-                </div>
+              <div
+                class="h-[53px] w-[53px] shadow-custom flex items-center justify-center bg-transparent rounded-xl hover:scale-125 hover:text-red-800 cursor-pointer"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <div
+                class="h-[53px] w-[53px] shadow-custom flex items-center justify-center bg-transparent rounded-xl hover:scale-125 hover:text-red-800 cursor-pointer"
+              >
+                <i class="fa-brands fa-telegram"></i>
+              </div>
+              <div
+                class="h-[53px] w-[53px] shadow-custom flex items-center justify-center bg-transparent rounded-xl hover:scale-125 hover:text-red-800 cursor-pointer"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+      <div class="w-full relative">
+        <div class="absolute left-8 pt-3 lg:hidden">
+          <i class="fa-solid fa-bars text-primary-color text-3xl"></i>
+        </div>
+        <div
+          class="fixed right-[-290px] mobile-menu transition-all duration-700 ease-in-out lg:hidden z-50"
+        >
+          <div
+            class="flex flex-col h-screen w-[290px] text-second-color py-[50px] px-[50px] border-l-[3px] border-l-solid border-l-black justify-between min-h-screen bg-main"
+          >
+            <div class="absolute left-3 exit-btn">
+              <i class="fa-solid fa-xmark text-primary-color text-3xl"></i>
+            </div>
+            <div>
+              <img
+                src="images/logo.png
+        "
+                class="rounded-[50%] border-[5px] border-solid border-[#32363b]"
+              />
+            </div>
+            <div class="flex flex-col gap-y-5 px-3">
+              <div
+                class="flex items-center gap-x-3 text-primary-color cursor-pointer"
+              >
+                <i class="fa-solid fa-house"></i><span>صفحه اصلی</span>
+              </div>
+              <div
+                class="flex items-center gap-x-3 hover:text-primary-color cursor-pointer"
+              >
+                <i class="fa-solid fa-bolt"></i><span>مهارت ها</span>
+              </div>
+              <div
+                class="flex items-center gap-x-3 hover:text-primary-color cursor-pointer"
+              >
+                <i class="fa-regular fa-rectangle-list"></i
+                ><span>نمونه کارها</span>
+              </div>
+              <div
+                class="flex items-center gap-x-3 hover:text-primary-color cursor-pointer"
+              >
+                <i class="fa-solid fa-file"></i><span>رزومه</span>
+              </div>
+              <div
+                class="flex items-center gap-x-3 hover:text-primary-color cursor-pointer"
+              >
+                <i class="fa-solid fa-user-group"></i><span>مشتریان</span>
+              </div>
+              <div
+                class="flex items-center gap-x-3 hover:text-primary-color cursor-pointer"
+              >
+                <i class="fa-solid fa-cart-shopping"></i><span>تعرفه ها</span>
+              </div>
+              <div
+                class="flex items-center gap-x-3 hover:text-primary-color cursor-pointer"
+              >
+                <i class="fa-solid fa-book-open"></i><span>وبلاگ</span>
+              </div>
+              <div
+                class="flex items-center gap-x-3 hover:text-primary-color cursor-pointer"
+              >
+                <i class="fa-solid fa-address-book"></i
+                ><span>ارتباط با من</span>
+              </div>
+            </div>
+            <div class="border-solid border-t border-t-white">
+              <span class="pt-3 inline-block">شبکه های اجتماعی</span>
+              <div class="flex flex-wrap items-center gap-3 pt-3">
+                <div
+                  class="h-[53px] w-[53px] shadow-custom flex items-center justify-center bg-transparent rounded-xl hover:scale-125 hover:text-red-800 cursor-pointer"
+                >
+                  <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div
+                  class="h-[53px] w-[53px] shadow-custom flex items-center justify-center bg-transparent rounded-xl hover:scale-125 hover:text-red-800 cursor-pointer"
+                >
+                  <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div
+                  class="h-[53px] w-[53px] shadow-custom flex items-center justify-center bg-transparent rounded-xl hover:scale-125 hover:text-red-800 cursor-pointer"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div
+                  class="h-[53px] w-[53px] shadow-custom flex items-center justify-center bg-transparent rounded-xl hover:scale-125 hover:text-red-800 cursor-pointer"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div
+                  class="h-[53px] w-[53px] shadow-custom flex items-center justify-center bg-transparent rounded-xl hover:scale-125 hover:text-red-800 cursor-pointer"
+                >
+                  <i class="fa-brands fa-telegram"></i>
+                </div>
+                <div
+                  class="h-[53px] w-[53px] shadow-custom flex items-center justify-center bg-transparent rounded-xl hover:scale-125 hover:text-red-800 cursor-pointer"
+                >
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mx-auto">
+          <div
+            class="text-white max-w-[1320px] flex flex-col justify-center items-center py-36 gap-y-6"
+          >
+            <div
+              class="min-w-[250px] min-h-[250px] sm:min-w-[340px] sm:min-h-[340px] flex items-center justify-center border-solid border-8 border-white rounded-[50%]"
+            >
+              <img
+                src="images/banner.png "
+                class="w-[250px] sm:w-[325px] rounded-[50%]"
+              />
+            </div>
+            <h1 class="font-bold text-[24px] sm:text-[32px] md:text-5xl">
+              سلام من امیرحسین کیوانی هستم
+            </h1>
+            <h3>
+              <span
+                class="auto-type text-primary-color text-xl font-light"
+              ></span>
+            </h3>
+            <a href="#" class="text-primary-color py-3 px-5 rounded-xl x"
+              >ارتباط با من</a
+            >
+          </div>
+          <hr class="border-solid border border-[#121415]" />
+          <div class="text-center py-20">
+            <span class="font-medium text-sm text-primary-color inline-block"
+              >کاری که من انجام میدهم</span
+            >
+            <h2 class="text-6xl font-bold text-second-color py-10">مهارت ها</h2>
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 text-white"
+            >
+              <div
+                class="p-10 rounded-2xl justify-self-center w-[300px] sm:w-[400px] flex flex-col gap-y-5 items-start justify-between h-[350px] shadow-custom_2 bg-gradient-to-br from-[#212428] to-[#16181c] hover:scale-95 cursor-pointer"
+              >
+                <i
+                  class="fa-solid fa-laptop-code text-3xl text-primary-color"
+                ></i>
+                <p class="text-2xl font-medium">برنامه نویسی وبسایت</p>
+                <p style="font-weight: normal; text-align: right">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است.
+                </p>
+                <i class="fa-solid fa-arrow-left"></i>
+              </div>
+              <div
+                class="p-10 rounded-2xl justify-self-center w-[300px] sm:w-[400px] flex flex-col gap-y-5 items-start justify-between h-[350px] shadow-custom_2 bg-gradient-to-br from-[#212428] to-[#16181c] hover:scale-95 cursor-pointer"
+              >
+                <i class="fa-solid fa-hammer text-3xl text-primary-color"></i>
+                <p class="text-2xl font-medium">توسعه رابط کاربری (UI)</p>
+                <p style="font-weight: normal; text-align: right">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است.
+                </p>
+                <i class="fa-solid fa-arrow-left"></i>
+              </div>
+              <div
+                class="p-10 rounded-2xl justify-self-center w-[300px] sm:w-[400px] flex flex-col gap-y-5 items-start justify-between h-[350px] shadow-custom_2 bg-gradient-to-br from-[#212428] to-[#16181c] hover:scale-95 cursor-pointer"
+              >
+                <i
+                  class="fa-solid fa-user-check text-3xl text-primary-color"
+                ></i>
+                <p class="text-2xl font-medium">بهینه‌سازی تجربه کاربر (UX)</p>
+                <p style="font-weight: normal; text-align: right">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است.
+                </p>
+                <i class="fa-solid fa-arrow-left"></i>
+              </div>
+            </div>
+          </div>
+          <hr class="border-solid border border-[#121415]" />
+          <div class="text-center py-20">
+            <span
+              class="font-medium text-sm text-primary-color pt-20 inline-block"
+              >از نمونه کارها من دیدن کنید و نظرات خود را بیان کنید</span
+            >
+            <h2 class="text-4xl md:text-6xl font-bold text-second-color py-10">
+              نمونه کارهای من
+            </h2>
+            <div>
+              <!-- something -->
+              <!-- Slider main container -->
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div
+                    class="swiper-slide w-full h-[100px] bg-transparent customShadow rounded-3xl py-3 flex flex-col justify-around w-[400px] h-[400px] items-center"
+                  >
+                    <div class="rounded-2xl overflow-hidden">
+                      <img src="images/my-work-2.jpg" class="w-full" />
+                    </div>
+                    <div class="flex w-full justify-around">
+                      <div>اپلیکیشن</div>
+                      <div>
+                        <i class="fa-regular fa-heart"></i>
+                        <span>122</span>
+                      </div>
+                    </div>
+                    <span class="text-[23px] text-second-color"
+                      >طراحی اپلیکیشن هتل</span
+                    >
+                  </div>
+                  <div
+                    class="swiper-slide w-full h-[100px] bg-transparent customShadow rounded-3xl py-3 flex flex-col justify-around w-[400px] h-[400px] items-center"
+                  >
+                    <div class="rounded-2xl overflow-hidden">
+                      <img src="images/my-work-1.jpg" class="w-full" />
+                    </div>
+                    <div class="flex w-full justify-around">
+                      <div>اپلیکیشن</div>
+                      <div>
+                        <i class="fa-regular fa-heart"></i>
+                        <span>122</span>
+                      </div>
+                    </div>
+                    <span class="text-[23px] text-second-color"
+                      >طراحی اپلیکیشن هتل</span
+                    >
+                  </div>
+                  <div
+                    class="swiper-slide w-full h-[100px] bg-transparent customShadow rounded-3xl py-3 flex flex-col justify-around w-[400px] h-[400px] items-center"
+                  >
+                    <div class="rounded-2xl overflow-hidden">
+                      <img src="images/my-work-2.jpg" class="w-full" />
+                    </div>
+                    <div class="flex w-full justify-around">
+                      <div>اپلیکیشن</div>
+                      <div>
+                        <i class="fa-regular fa-heart"></i>
+                        <span>122</span>
+                      </div>
+                    </div>
+                    <span class="text-[23px] text-second-color"
+                      >طراحی اپلیکیشن هتل</span
+                    >
+                  </div>
+                  <div
+                    class="swiper-slide w-full h-[100px] bg-transparent customShadow rounded-3xl py-3 flex flex-col justify-around w-[400px] h-[400px] items-center"
+                  >
+                    <div class="rounded-2xl overflow-hidden">
+                      <img src="images/my-work-1.jpg" class="w-full" />
+                    </div>
+                    <div class="flex w-full justify-around">
+                      <div>اپلیکیشن</div>
+                      <div>
+                        <i class="fa-regular fa-heart"></i>
+                        <span>122</span>
+                      </div>
+                    </div>
+                    <span class="text-[23px] text-second-color"
+                      >طراحی اپلیکیشن هتل</span
+                    >
+                  </div>
+                  <div
+                    class="swiper-slide w-full h-[100px] bg-transparent customShadow rounded-3xl py-3 flex flex-col justify-around w-[400px] h-[400px] items-center"
+                  >
+                    <div class="rounded-2xl overflow-hidden">
+                      <img src="images/my-work-2.jpg" class="w-full" />
+                    </div>
+                    <div class="flex w-full justify-around">
+                      <div>اپلیکیشن</div>
+                      <div>
+                        <i class="fa-regular fa-heart"></i>
+                        <span>122</span>
+                      </div>
+                    </div>
+                    <span class="text-[23px] text-second-color"
+                      >طراحی اپلیکیشن هتل</span
+                    >
+                  </div>
+                  <div
+                    class="swiper-slide w-full h-[100px] bg-transparent customShadow rounded-3xl py-3 flex flex-col justify-around w-[400px] h-[400px] items-center"
+                  >
+                    <div class="rounded-2xl overflow-hidden">
+                      <img src="images/my-work-1.jpg" class="w-full" />
+                    </div>
+                    <div class="flex w-full justify-around">
+                      <div>اپلیکیشن</div>
+                      <div>
+                        <i class="fa-regular fa-heart"></i>
+                        <span>122</span>
+                      </div>
+                    </div>
+                    <span class="text-[23px] text-second-color"
+                      >طراحی اپلیکیشن هتل</span
+                    >
+                  </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+            </div>
+          </div>
+          <hr class="border-solid border border-[#121415]" />
+          <div class="text-center py-20 flex flex-col">
+            <span class="font-medium text-sm text-primary-color inline-block"
+              >+۲سال تجربه</span
+            >
+            <h2 class="text-4xl md:text-6xl font-bold text-second-color py-10">
+              رزومه کاری من
+            </h2>
+            <div
+              class="flex flex-col gap-y-5 md:flex-row w-full justify-evenly customShadow2 px-3 py-5 md:[&>div]:w-[300px] [&>div]:w-[250px] [&>div]:px-10 [&>div]:py-5 [&>div]:rounded-xl"
+            >
+              <div
+                class="text-second-color cursor-pointer resume_item resume_item--active"
+                data-content-id="#education"
+              >
+                تحصیلات
+              </div>
+              <div
+                class="hover:bg-[#878e99] text-second-color hover:text-primary-color hover:text-lg hover:customShadow3 cursor-pointer resume_item"
+                data-content-id="#skills"
+              >
+                مهارت های حرفه ای
+              </div>
+              <div
+                class="hover:bg-[#878e99] text-second-color hover:text-primary-color hover:text-lg hover:customShadow3 cursor-pointer resume_item"
+                data-content-id="#experience"
+              >
+                تجربه
+              </div>
+              <div
+                class="hover:bg-[#878e99] text-second-color hover:text-primary-color hover:text-lg hover:customShadow3 cursor-pointer resume_item"
+                data-content-id="#interview"
+              >
+                مصاحبه
+              </div>
+            </div>
+            <div
+              class="flex w-full gap-20 flex-wrap resume-content__show resume-content transition-opacity duration-200 ease-in"
+              id="education"
+            >
+              <div
+                class="w-full sm:w-2/5 py-10 px-6 customShadow2 text-second-color"
+              >
+                <div class="flex justify-between items-center px-6 py-10">
+                  <div>
+                    <h5>لورم ایپسوم متن ساختگی</h5>
+                    <span>دانشگاه اصفهان</span>
+                  </div>
+                  <div>
+                    <span
+                      class="text-primary-color py-2 px-5 rounded-xl x customShadow"
+                      >3.90/4</span
+                    >
+                  </div>
+                </div>
+                <p>
+                  لورم ایپسوم متن ساختگی دانشگاه تهران - (1390- 1400) 3.90/4
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید
+                  سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                </p>
+              </div>
+              <div
+                class="w-full sm:w-2/5 py-10 px-6 customShadow2 text-second-color"
+              >
+                <div class="flex justify-between items-center px-6 py-10">
+                  <div>
+                    <h5>لورم ایپسوم متن ساختگی</h5>
+                    <span>دانشگاه اصفهان</span>
+                  </div>
+                  <div>
+                    <span
+                      class="text-primary-color py-2 px-5 rounded-xl x customShadow"
+                      >3.90/4</span
+                    >
+                  </div>
+                </div>
+                <p>
+                  لورم ایپسوم متن ساختگی دانشگاه تهران - (1390- 1400) 3.90/4
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید
+                  سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                </p>
+              </div>
+              <div
+                class="w-full sm:w-2/5 py-10 px-6 customShadow2 text-second-color"
+              >
+                <div class="flex justify-between items-center px-6 py-10">
+                  <div>
+                    <h5>لورم ایپسوم متن ساختگی</h5>
+                    <span>دانشگاه اصفهان</span>
+                  </div>
+                  <div>
+                    <span
+                      class="text-primary-color py-2 px-5 rounded-xl x customShadow"
+                      >3.90/4</span
+                    >
+                  </div>
+                </div>
+                <p>
+                  لورم ایپسوم متن ساختگی دانشگاه تهران - (1390- 1400) 3.90/4
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید
+                  سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                </p>
+              </div>
+              <div
+                class="w-full sm:w-2/5 py-10 px-6 customShadow2 text-second-color"
+              >
+                <div class="flex justify-between items-center px-6 py-10">
+                  <div>
+                    <h5>لورم ایپسوم متن ساختگی</h5>
+                    <span>دانشگاه اصفهان</span>
+                  </div>
+                  <div>
+                    <span
+                      class="text-primary-color py-2 px-5 rounded-xl x customShadow"
+                      >3.90/4</span
+                    >
+                  </div>
+                </div>
+                <p>
+                  لورم ایپسوم متن ساختگی دانشگاه تهران - (1390- 1400) 3.90/4
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید
+                  سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex w-full gap-20 flex-wrap resume-content"
+              id="skills"
+            >
+              <div
+                class="w-full sm:w-2/5 py-10 px-6 customShadow2 text-second-color"
+              >
+                <!-- some -->
+                <div class="skill-box">
+                  <span class="skill-title">HTML</span>
+                  <div class="skill-bar">
+                    <div class="skill-per w-100">
+                      <span class="tooltip">100%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-box">
+                  <span class="skill-title">CSS</span>
+                  <div class="skill-bar">
+                    <div class="skill-per w90">
+                      <span class="tooltip">90%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-box">
+                  <span class="skill-title">BOOTSTRAP</span>
+                  <div class="skill-bar">
+                    <div class="skill-per w60">
+                      <span class="tooltip">60%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-box">
+                  <span class="skill-title">tailwind</span>
+                  <div class="skill-bar">
+                    <div class="skill-per w75">
+                      <span class="tooltip">75%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-box">
+                  <span class="skill-title">JAVASCRIPT</span>
+                  <div class="skill-bar">
+                    <div class="skill-per w65">
+                      <span class="tooltip">65%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-box">
+                  <span class="skill-title">GIT & GITHUB</span>
+                  <div class="skill-bar">
+                    <div class="skill-per w80">
+                      <span class="tooltip">80%</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- some -->
+              </div>
+              <div
+                class="w-full sm:w-2/5 py-10 px-6 customShadow2 text-second-color"
+              >
+                <div class="skill-box">
+                  <span class="skill-title">REACT</span>
+                  <div class="skill-bar">
+                    <div class="skill-per w-0">
+                      <span class="tooltip">0%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-box">
+                  <span class="skill-title">NODE JS</span>
+                  <div class="skill-bar">
+                    <div class="skill-per w-0">
+                      <span class="tooltip">0%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-box">
+                  <span class="skill-title">TYPESCRIPT</span>
+                  <div class="skill-bar">
+                    <div class="skill-per w-0">
+                      <span class="tooltip">0%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-box">
+                  <span class="skill-title">VUE JS</span>
+                  <div class="skill-bar">
+                    <div class="skill-per w-0">
+                      <span class="tooltip">0%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-box">
+                  <span class="skill-title">SQL</span>
+                  <div class="skill-bar">
+                    <div class="skill-per w40">
+                      <span class="tooltip">40%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-box">
+                  <span class="skill-title">WORDPRESS</span>
+                  <div class="skill-bar">
+                    <div class="skill-per w-0">
+                      <span class="tooltip">0%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex w-full gap-20 flex-wrap resume-content"
+              id="experience"
+            >
+              <div
+                class="w-full sm:w-2/5 py-10 px-6 customShadow2 text-second-color"
+              >
+                <div class="flex justify-between items-center px-6 py-10">
+                  <div>
+                    <h5>لورم ایپسوم متن ساختگی</h5>
+                    <span>دانشگاه اصفهان</span>
+                  </div>
+                  <div>
+                    <span
+                      class="text-primary-color py-2 px-5 rounded-xl x customShadow"
+                      >3.90/4</span
+                    >
+                  </div>
+                </div>
+                <p>
+                  لورم ایپسوم متن ساختگی دانشگاه تهران - (1390- 1400) 3.90/4
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید
+                  سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                </p>
+              </div>
+              <div
+                class="w-full sm:w-2/5 py-10 px-6 customShadow2 text-second-color"
+              >
+                <div class="flex justify-between items-center px-6 py-10">
+                  <div>
+                    <h5>لورم ایپسوم متن ساختگی</h5>
+                    <span>دانشگاه اصفهان</span>
+                  </div>
+                  <div>
+                    <span
+                      class="text-primary-color py-2 px-5 rounded-xl x customShadow"
+                      >3.90/4</span
+                    >
+                  </div>
+                </div>
+                <p>
+                  لورم ایپسوم متن ساختگی دانشگاه تهران - (1390- 1400) 3.90/4
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید
+                  سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                </p>
+              </div>
+              <div
+                class="w-full sm:w-2/5 py-10 px-6 customShadow2 text-second-color"
+              >
+                <div class="flex justify-between items-center px-6 py-10">
+                  <div>
+                    <h5>لورم ایپسوم متن ساختگی</h5>
+                    <span>دانشگاه اصفهان</span>
+                  </div>
+                  <div>
+                    <span
+                      class="text-primary-color py-2 px-5 rounded-xl x customShadow"
+                      >3.90/4</span
+                    >
+                  </div>
+                </div>
+                <p>
+                  لورم ایپسوم متن ساختگی دانشگاه تهران - (1390- 1400) 3.90/4
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید
+                  سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                </p>
+              </div>
+              <div
+                class="w-full sm:w-2/5 py-10 px-6 customShadow2 text-second-color"
+              >
+                <div class="flex justify-between items-center px-6 py-10">
+                  <div>
+                    <h5>لورم ایپسوم متن ساختگی</h5>
+                    <span>دانشگاه اصفهان</span>
+                  </div>
+                  <div>
+                    <span
+                      class="text-primary-color py-2 px-5 rounded-xl x customShadow"
+                      >3.90/4</span
+                    >
+                  </div>
+                </div>
+                <p>
+                  لورم ایپسوم متن ساختگی دانشگاه تهران - (1390- 1400) 3.90/4
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید
+                  سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex w-full gap-20 flex-wrap resume-content"
+              id="interview"
+            >
+              <div
+                class="w-full sm:w-2/5 py-10 px-6 customShadow2 text-second-color"
+              >
+                <div class="flex justify-between items-center px-6 py-10">
+                  <div>
+                    <h5>لورم ایپسوم متن ساختگی</h5>
+                    <span>دانشگاه اصفهان</span>
+                  </div>
+                  <div>
+                    <span
+                      class="text-primary-color py-2 px-5 rounded-xl x customShadow"
+                      >3.90/4</span
+                    >
+                  </div>
+                </div>
+                <p>
+                  لورم ایپسوم متن ساختگی دانشگاه تهران - (1390- 1400) 3.90/4
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید
+                  سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                </p>
+              </div>
+              <div
+                class="w-full sm:w-2/5 py-10 px-6 customShadow2 text-second-color"
+              >
+                <div class="flex justify-between items-center px-6 py-10">
+                  <div>
+                    <h5>لورم ایپسوم متن ساختگی</h5>
+                    <span>دانشگاه اصفهان</span>
+                  </div>
+                  <div>
+                    <span
+                      class="text-primary-color py-2 px-5 rounded-xl x customShadow"
+                      >3.90/4</span
+                    >
+                  </div>
+                </div>
+                <p>
+                  لورم ایپسوم متن ساختگی دانشگاه تهران - (1390- 1400) 3.90/4
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                  استفاده از طراحان گرافیک است. لورم ایپسوم متن ساختگی با تولید
+                  سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr class="border-solid border border-[#121415]" />
+          <div class="py-20">
+            <span class="text-primary-color">مشتریان محبوب</span>
+            <h2 class="text-6xl text-second-color py-8">مشتریان</h2>
+            <div class="flex gap-x-12 flex-col md:flex-row py-5">
+              <div class="md:h-screen md:w-1/3 w-full">
+                <div class="md:sticky md:top-[160px]">
+                  <ul class="flex flex-col gap-y-10">
+                    <li
+                      class="text-center p-5 rounded-xl customShadow3 hover:text-primary-color cursor-pointer"
+                    >
+                      جاوااسکریپت
+                    </li>
+                    <li
+                      class="text-center p-5 rounded-xl customShadow3 hover:text-primary-color cursor-pointer"
+                    >
+                      جاوااسکریپت
+                    </li>
+                    <li
+                      class="text-center p-5 rounded-xl customShadow3 hover:text-primary-color cursor-pointer"
+                    >
+                      جاوااسکریپت
+                    </li>
+                    <li
+                      class="text-center p-5 rounded-xl customShadow3 hover:text-primary-color cursor-pointer"
+                    >
+                      جاوااسکریپت
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="md:w-2/3 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 py-[65px]"
+              >
+                <div
+                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                >
+                  <div class="px-5 py-12">
+                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                  </div>
+                  <div class="text-center text-white">tooltip</div>
+                </div>
+                <div
+                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                >
+                  <div class="px-5 py-12">
+                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                  </div>
+                  <div class="text-center text-white">tooltip</div>
+                </div>
+                <div
+                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                >
+                  <div class="px-5 py-12">
+                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                  </div>
+                  <div class="text-center text-white">tooltip</div>
+                </div>
+                <div
+                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                >
+                  <div class="px-5 py-12">
+                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                  </div>
+                  <div class="text-center text-white">tooltip</div>
+                </div>
+                <div
+                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                >
+                  <div class="px-5 py-12">
+                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                  </div>
+                  <div class="text-center text-white">tooltip</div>
+                </div>
+                <div
+                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                >
+                  <div class="px-5 py-12">
+                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                  </div>
+                  <div class="text-center text-white">tooltip</div>
+                </div>
+                <div
+                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                >
+                  <div class="px-5 py-12">
+                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                  </div>
+                  <div class="text-center text-white">tooltip</div>
+                </div>
+                <div
+                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                >
+                  <div class="px-5 py-12">
+                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                  </div>
+                  <div class="text-center text-white">tooltip</div>
+                </div>
+                <div
+                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                >
+                  <div class="px-5 py-12">
+                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                  </div>
+                  <div class="text-center text-white">tooltip</div>
+                </div>
+                <div
+                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                >
+                  <div class="px-5 py-12">
+                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                  </div>
+                  <div class="text-center text-white">tooltip</div>
+                </div>
+                <div
+                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                >
+                  <div class="px-5 py-12">
+                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                  </div>
+                  <div class="text-center text-white">tooltip</div>
+                </div>
+                <div
+                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                >
+                  <div class="px-5 py-12">
+                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                  </div>
+                  <div class="text-center text-white">tooltip</div>
+                </div>
+                <div
+                  class="border border-solid border-red-600 w-[290px] h-[210px] rounded-3xl bg-transparent customShadow3"
+                >
+                  <div class="px-5 py-12">
+                    <img src="images/tooltip.JPG" class="w-full rounded-3xl" />
+                  </div>
+                  <div class="text-center text-white">tooltip</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="border-solid border border-[#121415]" />
+          <div class="py-20">
+            <span
+              class="font-medium text-sm text-primary-color inline-block text-center"
+            >
+              با من در تماس باشید
+            </span>
+            <h2 class="text-4xl md:text-6xl font-bold text-second-color py-10">
+              ارتباط با من
+            </h2>
+            <div class="w-full rounded-lg custom-shadow3 p-[35px] mt-[40px]">
+              <div
+                class="content h-full flex flex-col-reverse md:flex-row gap-[23px] items-center justify-center bg-white rounded-xl custom-shadow3 p-[35px]"
+              >
+                <div
+                  class="left_content w-full md:w-1/4 h-full flex flex-col md:flex-nowrap flex-wrap items-center justify-center relative"
+                >
+                  <div class="info_contact text-center mb-[22px]">
+                    <i
+                      class="fa fa-map-marker-alt text-3xl text-[#3e2093] mb-[10px]"
+                    ></i>
+                    <h5 class="title_info_contact text-lg font-medium">
+                      Address
+                    </h5>
+                    <span class="text text-sm block text-[#afafb6]"
+                      >Surkhet, NP12
+                    </span>
+                    <span class="text text-sm block text-[#afafb6]"
+                      >Birendranagar 06
+                    </span>
+                  </div>
+                  <div class="info_contact text-center mb-[22px]">
+                    <i
+                      class="fa fa-phone text-3xl text-[#3e2093] mb-[10px]"
+                    ></i>
+                    <h5 class="title_info_contact text-lg font-medium">
+                      Phone
+                    </h5>
+                    <span class="text text-sm block text-[#afafb6]"
+                      >+0098 9893 5647
+                    </span>
+                    <span class="text text-sm block text-[#afafb6]"
+                      >+0096 3434 5678
+                    </span>
+                  </div>
+                  <div class="info_contact text-center mb-[22px]">
+                    <i
+                      class="fa fa-envelope text-3xl text-[#3e2093] mb-[10px]"
+                    ></i>
+                    <h5 class="title_info_contact text-lg font-medium">
+                      Email
+                    </h5>
+                    <span class="text text-sm block text-[#afafb6]"
+                      >codinglab@gmail.com
+                    </span>
+                    <span class="text text-sm block text-[#afafb6]"
+                      >info.codinglab@gmail.com
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="right_content w-full md:w-3/4 h-full p-0 md:pl-[75px] mb-[20px] md:mb-[20px]"
+                >
+                  <h4 class="text-2xl text-[#3e2093] font-semibold">
+                    Send us a message
+                  </h4>
+                  <p>
+                    If you have any work from me or any types of quries related
+                    to my tutorial, you can send me message from here. It's my
+                    pleasure to help you.
+                  </p>
+                  <form>
+                    <div class="input_box w-full h-[55px] my-[12px] mx-0">
+                      <input
+                        type="text"
+                        placeholder="enter your name"
+                        class="border-none bg-[#f0f1f0] w-full h-full px-[15px] py-0 rounded-sm text-base resize-none outline-none"
+                      />
+                    </div>
+                    <div class="input_box w-full h-[55px] my-[12px] mx-0">
+                      <input
+                        type="email"
+                        placeholder="enter your email"
+                        class="border-none bg-[#f0f1f0] w-full h-full px-[15px] py-0 rounded-sm text-base resize-none outline-none"
+                      />
+                    </div>
+                    <div
+                      class="input_box textarea_box w-full h-[55px] my-[12px] mx-0"
+                    >
+                      <textarea
+                        placeholder="enter your message"
+                        cols="30"
+                        rows="10"
+                        class="border-none bg-[#f0f1f0] w-full h-full px-[15px] py-0 rounded-sm text-base resize-none outline-none"
+                      ></textarea>
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn_form border-none bg-[#3e2093] text-white rounded-lg py-[11px] px-[16px] text-lg mt-[12px] cursor-pointer hover:bg-[#5029bc]"
+                    >
+                      send now
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="border-solid border border-[#121415]" />
+          <div class="text-white flex flex-col text-center py-10 gap-y-5">
+            <span>© 1403. تمامی حقوق سایت محفوظ است </span>
+            <span>نوشته شده توسط امیرحسین کیوانی</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed(".auto-type", {
+        strings: ["فرانت اند دولوپر", "دانشجوی کامپیوتر", "برنامه نویس وب"],
+        typeSpeed: 100,
+        backSpeed: 150,
+        looped: true,
+      });
+    </script>
+    <script>
+      // spiwer :
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        spaceBetween: 30,
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          1200: {
+            slidesPerView: 3,
+          },
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
   </body>
 </html>
